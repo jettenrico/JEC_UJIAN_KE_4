@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "dfb39876-6256-45f3-b1ed-3602cdebb6e6",
+		"name": "JEC_UJIAN_WEEK4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24241343"
+	},
+	"item": [
+		{
+			"name": "Insert Query",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"consumenId\": 1,\r\n    \"installment\": 1256000.00,\r\n    \"carName\": \"BMW 3 Serie\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/installments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"installments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert Bulk",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n    \"consumenId\": 2,\r\n    \"installment\": 12536000.00,\r\n    \"carName\": \"BMW 5 Serie\"\r\n    },\r\n    {\r\n    \"consumenId\": 3,\r\n    \"installment\": 22536000.00,\r\n    \"carName\": \"Mercedes Benz S600\"\r\n    },\r\n    {\r\n    \"consumenId\": 4,\r\n    \"installment\": 5256700.00,\r\n    \"carName\": \"Porsche Taycan\"\r\n    },\r\n    {\r\n    \"consumenId\": 5,\r\n    \"installment\": 7678456.00,\r\n    \"carName\": \"Lamborghini Elemento\"\r\n    },\r\n    {\r\n    \"consumenId\": 6,\r\n    \"installment\": 12457000.00,\r\n    \"carName\": \"Bugatti Chiron\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/installments/bulk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"installments",
+						"bulk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find All With Paging",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/installment/search/dto/10/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"installment",
+						"search",
+						"dto",
+						"10",
+						"0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
